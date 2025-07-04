@@ -228,18 +228,18 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Additional security and development files
 # Git-related
-.git/
 *.orig
 
-# IDE and Editor files
+# IDE and Editor files (consolidated)
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS generated files
+# OS generated files (consolidated)
 .DS_Store
 .DS_Store?
 ._*
@@ -248,53 +248,45 @@ cython_debug/
 ehthumbs.db
 Thumbs.db
 
-# Logs and databases
+# Logs and databases (consolidated)
 *.log
 *.sql
 *.sqlite
 *.db
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
-coverage/
-*.lcov
-
-# API Keys and sensitive files
+# API Keys and sensitive files (consolidated)
 *.key
 *.pem
 config/secrets.json
 secrets/
 .secrets
 
-# Backup files
+# Backup and temporary files (consolidated)
 *.bak
 *.backup
 *.tmp
-
-# Temporary files
+*.orig
 tmp/
 temp/
 .tmp/
 .temp/
 
-# Build artifacts
+# Build artifacts (consolidated)
 out/
+dist/
+build/
 
-# Package files
+# Package and archive files
 *.zip
 *.tar.gz
 *.rar
+*.tgz
 
 # Documentation build
 docs/build/
 docs/_build/
 
-# Windows executable files
+# Executable files
 *.exe
 *.msi
 *.dmg
@@ -306,15 +298,9 @@ docs/_build/
 .local/
 local/
 
-# Testing
+# Testing (consolidated)
 .pytest_cache/
 .coverage
 htmlcov/
 .tox/
 .nox/
-
-# Jupyter
-.ipynb_checkpoints
-
-# PyCharm
-.idea/
