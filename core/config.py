@@ -24,14 +24,10 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 
 # Direct PostgreSQL Connection (Primary Method)
 # Updated URL with correct hostname format
-# POSTGRES_URL = "postgresql://postgres:You1@db.whqrjyospvdjsjpujkfd.supabase.co:5432/postgres"
-POSTGRES_URL = os.getenv("POSTGRES_URL", "postgresql://postgres:Q2hszywkvb@1@db.whqrjyospvdjsjpujkfd.supabase.co:5432/postgres")
+POSTGRES_URL = os.getenv("POSTGRES_URL", "")
 
 # Alternative URLs to try if the main one fails
-POSTGRES_URL_ALTERNATIVES = [
-    "postgresql://postgres:You1@whqrjyospvdjsjpujkfd.supabase.co:5432/postgres",
-    "postgresql://postgres:You1@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
-]
+POSTGRES_URL_ALTERNATIVES = [u for u in os.getenv("POSTGRES_URL_ALTERNATIVES", "").split(",") if u]
 
 # For testing data insertion, you can temporarily use service role key
 # SUPABASE_SERVICE_KEY = "your_service_role_key_here"  # Uncomment and add your service role key

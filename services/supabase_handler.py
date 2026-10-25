@@ -47,10 +47,10 @@ class SupabaseHandler:
                 try:
                     if self.verbose:
                         print(f"   🔄 Trying connection {i+1}/{len(connection_strings)}...")
-            
-            self.pg_connection = psycopg2.connect(connection_string)
-                    
-            if self.verbose:
+
+                    self.pg_connection = psycopg2.connect(connection_string)
+
+                    if self.verbose:
                         print(f"✅ PostgreSQL connection established using connection {i+1}!")
                     return  # Success, exit the method
                     
@@ -76,8 +76,8 @@ class SupabaseHandler:
                 connection_strings = [POSTGRES_URL] + POSTGRES_URL_ALTERNATIVES
                 for i, connection_string in enumerate(connection_strings):
                     try:
-                self.pg_connection = psycopg2.connect(connection_string)
-                if self.verbose:
+                        self.pg_connection = psycopg2.connect(connection_string)
+                        if self.verbose:
                             print(f"✅ PostgreSQL connection established after installing psycopg2 (connection {i+1})!")
                         return
                     except Exception:
